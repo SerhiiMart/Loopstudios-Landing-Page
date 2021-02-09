@@ -8,4 +8,13 @@ body {
   font-weight: 300;
   font-size: 15px;
 }
+
+header .header {
+  background: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+}
+
+header .header__nav ul {
+  list-style: none;
+}
 /*# sourceMappingURL=style.css.map */
