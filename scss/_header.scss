@@ -1,27 +1,56 @@
-
 header {
   height: 100vh;
-  background-image: url("../images/mobile/image-hero.jpg") 
-  !important;
-  background-size: cover;
+  
+  background-image: url('../images/mobile/image-hero.jpg');
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center top;
-  
+
+
+  display: grid;
+  align-items: start;
+
+  @include breakpoint-up(large) {
+      background-image: url('../images/desktop/image-hero.jpg');
+  }
+
+  nav {
+      display: none;
+
+      @include  breakpoint-up(large) {
+          display: block;
+      }
+  }
+}
 
   
-   
-  
-    
-   
-   ul {
-    list-style: none;
-  
-     
-    } 
-    li{
-      display: inline;
-    }
+.navbar {
+  &__container {
+      width: 86%;
+      height: 25px; 
+      max-width: 1114px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
 
+  &__logo {
+      display: block;
+      width: 150px;
+
+      @include  breakpoint-up(large){
+          width: 192px;
+      }
+  }
+  &__menu-icon {
+      cursor: pointer;
+
+      @include  breakpoint-up(large) {
+          display: none;
+      }
+  }
 }
 
 

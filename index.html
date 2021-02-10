@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="stylesheet" href="./dist/css/style.css">
+  <link rel="stylesheet" href="/dist/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
@@ -18,22 +18,25 @@
 </head>
 <body>
   <header>
+    <div class="navbar">
+      <div class="navbar__container">
+        <img class="logo navbar__logo" src="images/logo.svg" alt="Loopstudios logo">
     
-    <div class="header__logo">
-      <a href="/">
-        <img src="./images/logo.svg" alt="Loopstudios" >
-      </a>
+        <img id="menu-btn" class="navbar__menu-icon" src="images/icon-hamburger.svg" alt="Menu">
+  
+        <nav>
+          <ul class="menu">
+            <li class="menu__item"><a class="menu__link" href="#" title="About">About</a></li>
+            <li class="menu__item"><a class="menu__link" href="#" title="Careers">Careers</a></li>
+            <li class="menu__item"><a class="menu__link" href="#" title="Events">Events</a></li>
+            <li class="menu__item"><a class="menu__link" href="#" title="Products">Products</a></li>
+            <li class="menu__item"><a class="menu__link" href="#" title="Support">Support</a></li>
+          </ul>
+        </nav>
+      </div>
     </div>
-    <nav class="header__nav">
-      <ul class="links">
-        <li><a href="#">About</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Support</a></li>
-      </ul>
-    </nav>
- 
+  
+    <div class="title-container"><h1 class="title">Immersive experiences that deliver</h1></div>
   </header>
 
   
