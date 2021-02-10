@@ -1,19 +1,29 @@
 
 header {
-  .header {
-  background: url(../images/desktop/image-hero.jpg);
+  background-image: url('~../images/desktop/image-hero.jpg');
+
   background-repeat: no-repeat;
+  background-size: cover;
+  
   &__logo {
     
   }
 
 
   &__nav{
-    ul {
-      list-style: none;
+   
+  
+    
+   }
+   ul {
+    list-style: none;
+  
+     
     } 
+    li{
+      display: inline;
     }
-  }
+
 }
 
 
