@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:ital,wght@0,300;1,300&display=swap");
-
 header {
   height: 100vh;
   background-image: url("../images/mobile/image-hero.jpg");
-  background-size: cover;
   background-repeat: no-repeat;
+  background-size: cover;
   background-position: center top;
   display: -ms-grid;
   display: grid;
@@ -13,12 +12,58 @@ header {
           align-items: start;
 }
 
-header ul {
-  list-style: none;
+@media (min-width: 64em) {
+  header {
+    background-image: url("../images/desktop/image-hero.jpg");
+  }
 }
 
-header li {
-  display: inline;
+header nav {
+  display: none;
+}
+
+@media (min-width: 64em) {
+  header nav {
+    display: block;
+  }
+}
+
+.navbar__container {
+  width: 86%;
+  height: 25px;
+  max-width: 1114px;
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar__logo {
+  display: block;
+  width: 150px;
+}
+
+@media (min-width: 64em) {
+  .navbar__logo {
+    width: 192px;
+  }
+}
+
+.navbar__menu-icon {
+  cursor: pointer;
+}
+
+@media (min-width: 64em) {
+  .navbar__menu-icon {
+    display: none;
+  }
 }
 
 *, *::before, *::after {
@@ -27,8 +72,16 @@ header li {
 }
 
 body {
-  font-family: 'Alata', sans-serif;
-  font-weight: 300;
   font-size: 15px;
+}
+
+h1, h2, span {
+  font-family: 'Josefine Sans', sans-serif;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+p, a, button {
+  font-family: 'Alata', sans-serif;
 }
 /*# sourceMappingURL=style.css.map */
