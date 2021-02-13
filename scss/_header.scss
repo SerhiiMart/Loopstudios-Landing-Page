@@ -6,6 +6,7 @@ header {
   background-position: center top;
   display: grid;
   align-items: start;
+  padding: 40px 0 100px 0;
 
   @include breakpoint-up(large) {
       background-image: url('../images/desktop/image-hero.jpg');
@@ -19,9 +20,32 @@ header {
 //         display:inline;
 //     } 
 //  }
-}
-.navbar {
+
+  .navbar {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    nav{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        a {
+            
+        }
+    }
+   }
+
+   .title-container {
+    width: 50%;
+    padding: 10px 45px;
+    border: 2px solid $White;
+   }
+
+   .title{
+       font-size: 4em;
+       font-weight: 300;
+       color: $White;
+   }
 }
