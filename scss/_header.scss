@@ -11,41 +11,8 @@ header {
       background-image: url('../images/desktop/image-hero.jpg');
   }
 
-  nav {
-      display: none;
-      @include  breakpoint-up(large) {
-          display: block;
-      }
-  }
-  .navbar {
-    &__container {
-        width: 86%;
-        height: 25px; 
-        max-width: 1114px;
-        margin-left: auto;
-        margin-right: auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-  
-    &__logo {
-        display: block;
-        width: 150px;
-        @include  breakpoint-up(large){
-            width: 192px;
-        }
-    }
-    &__menu-icon {
-        cursor: pointer;
-        @include  breakpoint-up(large) {
-            display: none;
-        }
-    }
-  }
+ 
 }
-
-  
 
 
 
