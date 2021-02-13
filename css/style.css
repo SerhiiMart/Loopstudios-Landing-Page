@@ -35,7 +35,19 @@ header .navbar {
           align-items: center;
 }
 
-header .navbar nav {
+header .title-container {
+  width: 50%;
+  padding: 10px 45px;
+  border: 2px solid white;
+}
+
+header .title {
+  font-size: 4em;
+  font-weight: 300;
+  color: white;
+}
+
+header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -51,16 +63,82 @@ header .navbar nav {
           align-items: center;
 }
 
-header .title-container {
-  width: 50%;
-  padding: 10px 45px;
-  border: 2px solid white;
+header nav a {
+  display: inline-block;
 }
 
-header .title {
-  font-size: 4em;
-  font-weight: 300;
+.header-menu {
+  list-style-type: none;
+  padding-left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 1.45rem;
+}
+
+@media (min-width: 64em) {
+  .header-menu {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-column-gap: 2rem;
+            column-gap: 2rem;
+  }
+}
+
+.header-menu__link {
   color: white;
+  text-decoration: none;
+  opacity: .8;
+  position: relative;
+}
+
+@media (min-width: 64em) {
+  .header-menu__link::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    -webkit-transition: width .3s, left .3s;
+    transition: width .3s, left .3s;
+    position: absolute;
+    left: 50%;
+    bottom: -8px;
+  }
+  .header-menu__link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media (max-width: 39.9375em) {
+  .header-menu__link {
+    width: 86%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header-menu__link__link {
+    font-family: 'Josefine Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
 }
 
 *, *::before, *::after {

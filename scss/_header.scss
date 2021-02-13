@@ -26,15 +26,7 @@ header {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
-    nav{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-between;
-        align-items: center;
-        a {
-            
-        }
-    }
+  
    }
 
    .title-container {
@@ -48,4 +40,69 @@ header {
        font-weight: 300;
        color: $White;
    }
+   nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        display: inline-block;
+    }
 }
+}
+
+.header-menu {
+    list-style-type: none;
+    padding-left: 0;
+    // flexbox
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.45rem;
+
+    @include breakpoint-up(large)  {
+        // flexbox
+        flex-direction: row;
+        -moz-column-gap: 2rem;
+             column-gap: 2rem;
+    }
+
+    &__link {
+        color: $White;
+        text-decoration: none;
+        opacity: .8;
+        position: relative;
+        @include breakpoint-up(large) {
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                transition: width .3s, left .3s;
+                position: absolute;
+                left: 50%;
+                bottom: -8px;
+            }
+            &:hover::after {
+                width: 100%;
+                left: 0;
+            }
+        }
+        @include breakpoint-down(small) {
+            width: 86%;
+            height: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        
+            &__link {
+                font-family: 'Josefine Sans', sans-serif;
+                text-transform: uppercase;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+
